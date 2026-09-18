@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     { property: 'og:image', content: '/images/showup-social-card.webp' },
     { name: 'twitter:card', content: 'summary_large_image' }
   ] } },
-  nitro: { preset: 'node-server', esbuild: { options: { target: 'es2022' } }, externals: { external: ['@nimiq/core', '@libsql/client'] } },
+  nitro: { preset: process.env.NITRO_PRESET || (process.env.VERCEL ? 'vercel' : 'node-server'), esbuild: { options: { target: 'es2022' } }, externals: { external: ['@nimiq/core', '@libsql/client'] } },
   vite: { build: { target: 'es2022' } },
   typescript: { strict: true },
 });
