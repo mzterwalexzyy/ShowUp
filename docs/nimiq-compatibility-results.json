@@ -1,0 +1,123 @@
+{
+  "observedAt": "2026-09-17T00:41:17.371Z",
+  "evidenceClasses": [
+    "actual-published-package with synthetic host adapter",
+    "actual-public-testnet read-only",
+    "actual-Android-Nimiq-Pay end-to-end"
+  ],
+  "sdk": {
+    "version": "0.1.0",
+    "integrity": "sha512-QR5GGrL25U5xRkWdDhDMqY6npRXMtIu07Fe0cTXon5dLLlAuPhIaJU2egwASYITwFH1RXpYCE0JnufO88SleKA==",
+    "gitHead": "15f9c92d0ae4c9a86bec31a25684714c7442047b"
+  },
+  "core": {
+    "version": "2.7.1",
+    "integrity": "sha512-ndb4gxDPP/clz5tnEVy4lKfVuK7Z9I2PI6RKCSwRFHWsfHHAKUqqnVd4aQ8xtW7gTwBMrM8PaSNpBwIOaRLbfw=="
+  },
+  "checks": [
+    {
+      "name": "init times out when provider is absent",
+      "result": "pass"
+    },
+    {
+      "name": "fresh init succeeds after earlier failure",
+      "result": "pass"
+    },
+    {
+      "name": "account enumeration returns host values",
+      "result": "pass"
+    },
+    {
+      "name": "account enumeration is cached by provider",
+      "result": "pass"
+    },
+    {
+      "name": "sign forwards exact Unicode text and host signature result",
+      "result": "pass"
+    },
+    {
+      "name": "payment forwards integer Luna and exact memo, returning host string",
+      "result": "pass"
+    },
+    {
+      "name": "provider preserves returned errors",
+      "result": "pass"
+    },
+    {
+      "name": "provider preserves thrown adapter errors",
+      "result": "pass"
+    },
+    {
+      "name": "ecosystem getNetwork is not a testnet identifier",
+      "result": "pass"
+    },
+    {
+      "name": "published transaction shape exposes network and proof but omits executionResult",
+      "result": "pass"
+    },
+    {
+      "name": "actual public transaction has explicit successful execution and testnet ID",
+      "result": "pass"
+    },
+    {
+      "name": "actual public transaction reconstructs exact hash and verifies signature proof",
+      "result": "pass"
+    },
+    {
+      "name": "HTLC proof identifies cryptographic co-signers independently of contract sender",
+      "result": "pass"
+    },
+    {
+      "name": "actual finalizing block is canonical testnet macro with justification",
+      "result": "pass"
+    },
+    {
+      "name": "canonical parent chain reaches sample transaction block",
+      "result": "pass"
+    }
+  ],
+  "actualPayDeposit": true,
+  "actualPayCheckIn": true,
+  "actualPayRefund": true,
+  "actualPayFlow": {
+    "wallet": "NQ82 AB7V VBH1 4F58 J541 U8KR 8AE0 L1M6 5A2M",
+    "reservationId": "e05871c6-dc91-43bd-a20d-001ef214fbde",
+    "depositHash": "7a52af0a23089e97b87e9b3d02c56979f15f87a7c1efe8ee7c7f99e375552b93",
+    "depositValueLuna": 100000,
+    "attendanceAt": 1789605677371,
+    "refundReason": "VALID_ATTENDANCE",
+    "refundHash": "b60e54fb26f80e822d2e6d4474350b9a0f01998dedde910fa43d9d73fe5ab47b",
+    "refundValueLuna": 100000,
+    "refundState": "SETTLED"
+  },
+  "rpc": {
+    "endpoint": "https://rpc.testnet.nimiqwatch.com/",
+    "getNetworkId": {
+      "httpStatus": 400,
+      "error": "Method not allowed"
+    },
+    "head": {
+      "number": 11523377,
+      "network": "TestAlbatross"
+    }
+  },
+  "sender": {
+    "sampleHash": "f22de823140123cfdb1cc15b1263889b925abe8bc301d603832a9f76aef0cbf6",
+    "fromType": 2,
+    "proofType": "early-resolve",
+    "verifiedCoSigners": 2,
+    "attributionToActualPayLoginWallet": "verified in the end-to-end Android flow"
+  },
+  "finality": {
+    "macroNumber": 11522910,
+    "macroHash": "bf6b4675bd3aeaf4d718956953fda227a89ca9b3356a7914d0e27dba862f513d",
+    "transactionBlock": 11522867,
+    "verifiedParentLinks": 43,
+    "trust": "RPC node canonical-chain assertion, not independent consensus validation"
+  },
+  "memo": {
+    "encoding": "recipientData is hex UTF-8",
+    "byteLength": 27
+  },
+  "gate": "passed: Android Pay login, exact deposit, wallet-to-proof binding, finality, signed check-in and settled refund observed"
+}

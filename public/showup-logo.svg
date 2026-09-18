@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title desc">
+  <title id="title">ShowUp</title>
+  <desc id="desc">A geometric interlocking S and U mark with a ticket notch, followed by the ShowUp wordmark.</desc>
+  <g transform="translate(4 4)">
+    <rect width="88" height="88" rx="24" fill="#10251e"/>
+    <path d="M63 22H35c-9 0-16 7-16 16s7 16 16 16h18c3 0 5 2 5 5s-2 5-5 5H19v12h34c10 0 18-8 18-18s-8-18-18-18H35c-2 0-4-2-4-4s2-4 4-4h28V22Z" fill="#dfff46"/>
+    <path d="M52 22h19v39c0 16-10 25-25 25-5 0-10-1-14-3l9-11c2 1 4 2 7 2 7 0 11-4 11-13V22Z" fill="#fffdf7"/>
+    <path d="M58 22h13v13H58z" fill="#10251e"/>
+    <circle cx="64.5" cy="28.5" r="4.5" fill="#dfff46"/>
+  </g>
+  <text x="110" y="65" fill="#10251e" font-family="Inter,Arial,sans-serif" font-size="50" font-weight="800" letter-spacing="-2.5">ShowUp</text>
+</svg>

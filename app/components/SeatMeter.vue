@@ -1,0 +1,2 @@
+<script setup lang="ts">const p=defineProps<{available:number;capacity:number}>();const percent=computed(()=>Math.max(0,Math.min(100,((p.capacity-p.available)/p.capacity)*100)))</script>
+<template><div class="seat-meter"><div><strong>{{ available }}</strong> of {{ capacity }} seats available</div><div class="seat-track" role="progressbar" :aria-valuenow="capacity-available" aria-valuemin="0" :aria-valuemax="capacity"><i :style="{width:`${percent}%`}"></i></div></div></template>

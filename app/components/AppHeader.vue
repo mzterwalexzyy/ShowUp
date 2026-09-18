@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{host?:boolean}>()</script>
+<template><header class="app-header"><NuxtLink class="brand" to="/" aria-label="ShowUp home"><img src="/showup-logo.svg" alt="ShowUp" width="160" height="48"></NuxtLink><nav v-if="host" class="host-nav"><NuxtLink to="/host">Campaigns</NuxtLink><NuxtLink to="/host/new">Create event</NuxtLink></nav><div class="header-actions"><NetworkBadge/><slot/></div></header></template>

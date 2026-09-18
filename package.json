@@ -1,0 +1,33 @@
+{
+  "name": "showup",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.19.0 || ^24.11.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host 0.0.0.0",
+    "build": "nuxt build",
+    "typecheck": "nuxt typecheck",
+    "test": "node --expose-gc --import tsx --test tests/*.test.ts",
+    "test:concurrency": "node --expose-gc --import tsx --test tests/concurrency.test.ts",
+    "postinstall": "nuxt prepare",
+    "spike": "node scripts/compatibility-spike.mjs --run"
+  },
+  "dependencies": {
+    "@libsql/client": "0.17.4",
+    "@nimiq/core": "2.7.1",
+    "@nimiq/mini-app-sdk": "0.1.0",
+    "@types/qrcode": "^1.5.6",
+    "nuxt": "4.5.2",
+    "qrcode": "^1.5.4",
+    "vue": "3.5.42"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "tsx": "4.23.13",
+    "typescript": "5.9.2",
+    "vue-tsc": "3.3.11"
+  }
+}
